@@ -24,6 +24,10 @@ export const SidebarContainer = styled.aside`
   transition: 0.4s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+
+  @media screen and (max-width:1520px) {
+    width: 30%;
+  }
 `;
 export const Icon = styled.div`
   position: absolute;
@@ -72,6 +76,9 @@ export const SideBarLink = styled(LinkRouter)`
   color: white;
   margin: 5px 20px;
   padding: 0 30px;
+  @media screen and (max-width: 768px) {
+    margin: 5px 10px;
+  }
 
   &:hover {
     background: #65bf76;

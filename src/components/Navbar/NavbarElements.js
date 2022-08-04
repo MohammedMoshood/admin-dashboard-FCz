@@ -12,8 +12,8 @@ export const Nav = styled.nav`
   top: 0;
   position: relative;
   top: 0;
-  z-index: 1;
-  background: #fafeff;
+  z-index: 10;
+  background: red;
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -26,6 +26,7 @@ export const NavigationContainer = styled.div`
   width: 100%;
   padding: 24px 24px;
   max-width: 1920px;
+
 `;
 export const MenuIcon = styled.div`
   align-items: center;
@@ -45,6 +46,12 @@ export const NavMenu = styled.div`
 width: 17%;
 display: flex;
 align-items: center;
+justify-content: flex-end;
+@media screen and (max-width:768px) {
+  width: 17%;
+  display: flex;
+  justify-content: flex-end;
+}
 `;
 export const NavItem = styled.div`
 display: flex;
