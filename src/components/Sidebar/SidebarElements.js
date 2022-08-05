@@ -25,7 +25,7 @@ export const SidebarContainer = styled.aside`
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 
-  @media screen and (max-width:1520px) {
+  @media screen and (max-width: 1520px) {
     width: 30%;
   }
 `;
@@ -47,7 +47,6 @@ export const CloseIcon = styled(MdClose)`
 `;
 
 export const SideBarWrapper = styled.div`
-  color: white;
   margin-top: 30px;
 `;
 export const SideBarMenu = styled.ul`
@@ -66,14 +65,10 @@ export const SideBarLink = styled(LinkRouter)`
   justify-content: flex-start;
   font-size: 1.5rem;
   width: 90%;
-  font-weight: 400;
   text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: white;
+  color: grey;
   margin: 5px 20px;
   padding: 0 30px;
   @media screen and (max-width: 768px) {
@@ -87,4 +82,17 @@ export const SideBarLink = styled(LinkRouter)`
     transition: all 0.1s ease-in-out;
     font-weight: 600;
   }
+`;
+export const SideIcon = styled.div`
+  width: 20%;
+  align-items: center;
+  font-weight: 500;
+  padding-top: 10px;
+`;
+
+export const SideText = styled.p`
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
 `;
