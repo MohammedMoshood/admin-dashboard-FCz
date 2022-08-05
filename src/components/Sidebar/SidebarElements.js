@@ -69,10 +69,13 @@ export const SideBarLink = styled(LinkRouter)`
   list-style: none;
   transition: 0.2s ease-in-out;
   color: grey;
-  margin: 5px 20px;
+  margin-top:20px;
+  margin-left: 20px;
+  
   padding: 0 30px;
   @media screen and (max-width: 768px) {
-    margin: 5px 10px;
+    margin-top: 30px;
+    margin-left: 5px;
   }
 
   &:hover {
