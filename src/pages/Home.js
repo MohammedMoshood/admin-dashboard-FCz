@@ -1,22 +1,26 @@
 import React, { useState } from "react";
-import Navbar from '../components/Navbar/Navbar'
-import Sidebar from '../components/Sidebar/Sidebar'
-
+import Navbar from "../components/Navbar/Navbar";
+import Sidebar from "../components/Sidebar/Sidebar";
+import { HomeWrapper } from "../components/1 StaticHomeComponents/StaticHomeElements";
+import OverViewText from "../components/1 StaticHomeComponents/OverViewText";
+import StatusSection from "../components/Overview/StatusSection/StatusSection";
 
 const Home = () => {
-   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-   const toggle = () => {
-     setIsOpen(!isOpen);
-   };
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar> 
-      <>
-      <Navbar toggle={toggle}></Navbar>
-      </>
+      <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
+      <HomeWrapper>
+        <Navbar toggle={toggle}></Navbar>
+        <OverViewText  />
+        <StatusSection></StatusSection>
+      </HomeWrapper>
     </>
   );
-}
+};
 
-export default Home
+export default Home;
