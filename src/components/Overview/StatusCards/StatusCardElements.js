@@ -62,6 +62,7 @@ export const StatusCardWrapper = styled.div`
     transition: all 0.2s ease-in-out;
     border: 1px solid #419652;
     color: #419652;
+    cursor: pointer;
 
     ${StatusText}{
         color: #5de35d ;
