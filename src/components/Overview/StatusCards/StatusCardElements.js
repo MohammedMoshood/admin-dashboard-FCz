@@ -29,6 +29,7 @@ export const StatusText = styled.h4`
     color: #c7c5c5;
     font-weight: 500;
     margin-bottom: 40px;
+    padding-top: 20px;
   }
 `;
 export const StatusRate = styled.p`
