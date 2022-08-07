@@ -1,11 +1,11 @@
 import "./App.css";
-import Home from "../src/pages/Home";
-import { BrowserRouter as Router } from "react-router-dom";
+import Overview from "../src/pages/Overview";
+import { BrowserRouter as Router  , Switch , Route} from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <Home></Home>
+      <Overview></Overview>
     </Router>
   );
 }

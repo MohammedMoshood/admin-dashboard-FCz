@@ -6,20 +6,20 @@ import {
   SidebarContainer,
   Icon,
   SideBarWrapper,
-  SideBarMenu,
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <>
-      <SidebarContainer isOpen={isOpen} onClick={toggle}>
-        <Icon>
-          <CloseIcon />
-        </Icon>
+      <SidebarContainer isOpen={isOpen}>
         <SideBarWrapper>
-          <SideBarMenu>{SideBarData.map((item , index)=> {
+          <Icon>
+            <CloseIcon onClick={toggle} />
+          </Icon>
+
+          {SideBarData.map((item, index) => {
             return <MenuItem item={item} key={index} />;
-          })}</SideBarMenu>
+          })}
         </SideBarWrapper>
       </SidebarContainer>
     </>

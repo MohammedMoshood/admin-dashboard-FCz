@@ -25,7 +25,12 @@ export const SidebarContainer = styled.aside`
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 
   @media screen and (max-width: 1520px) {
+    width: 30%;
+    transition: 0.2s ease-in-out all;
+  }
+  @media screen and (max-width: 920px) {
     width: 40%;
+    transition: 0.2s ease-in-out all;
   }
 `;
 export const Icon = styled.div`
@@ -41,23 +46,15 @@ export const Icon = styled.div`
 export const CloseIcon = styled(MdClose)`
   color: white;
   &:hover {
-    color: grey;
+    color: lightgreen;
   }
 `;
 
 export const SideBarWrapper = styled.div`
   margin-top: 60px;
+  padding-bottom: 40px;
 `;
-export const SideBarMenu = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 90px);
-  text-align: center;
 
-  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(11, 70px);
-  }
-`;
 export const SideBarLink = styled(LinkRouter)`
   display: flex;
   align-items: center;
@@ -70,8 +67,7 @@ export const SideBarLink = styled(LinkRouter)`
   color: grey;
   margin-top:20px;
   margin-left: 20px;
-  
-  padding: 0 30px;
+  padding:20px 30px;
   @media screen and (max-width: 768px) {
     margin-top: 30px;
     margin-left: 15px;
@@ -90,7 +86,7 @@ export const SideIcon = styled.div`
   align-items: center;
   font-weight: 500;
   justify-self: flex-start;
-  padding-top: 7.5px;
+  padding-top: 5px;
 `;
 
 export const SideText = styled.p`
@@ -98,13 +94,34 @@ export const SideText = styled.p`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 30px;
   width: 80%;
-
-  @media screen {
-    width: auto;
-    margin-left: 10px;
-    
-  }
   
+`;
+
+export const DropdownLink = styled(LinkRouter)`
+  background-color: transparent;
+  list-style: none;
+  text-decoration: none;
+  height: 60px;
+  margin-top: 15px;
+  padding-left: 6.5rem;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  &:hover {
+    border-left: 5px solid lightgreen;
+    background: #1f1f1e;
+  }
+
+  @media screen and (max-width: 768px) {
+   width: 100%;
+   padding-left: 5rem;
+  }
+`;
+export const SubSidebarText = styled.span` 
+  color: white;
+  font-size: 20px ;
 `;

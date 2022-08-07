@@ -5,7 +5,7 @@ import { HomeWrapper } from "../components/1 StaticHomeComponents/StaticHomeElem
 import OverViewText from "../components/1 StaticHomeComponents/OverViewText";
 import StatusSection from "../components/Overview/StatusSection/StatusSection";
 
-const Home = () => {
+const Overview = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Overview;
