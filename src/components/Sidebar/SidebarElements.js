@@ -18,7 +18,6 @@ export const SidebarContainer = styled.aside`
   display: grid;
   align-items: center;
   top: 0;
-  left: 0;
   overflow-y: scroll;
   z-index: 999;
   transition: 0.4s ease-in-out;
@@ -26,7 +25,7 @@ export const SidebarContainer = styled.aside`
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 
   @media screen and (max-width: 1520px) {
-    width: 30%;
+    width: 40%;
   }
 `;
 export const Icon = styled.div`
@@ -47,7 +46,7 @@ export const CloseIcon = styled(MdClose)`
 `;
 
 export const SideBarWrapper = styled.div`
-  margin-top: 30px;
+  margin-top: 60px;
 `;
 export const SideBarMenu = styled.ul`
   display: grid;
@@ -75,7 +74,7 @@ export const SideBarLink = styled(LinkRouter)`
   padding: 0 30px;
   @media screen and (max-width: 768px) {
     margin-top: 30px;
-    margin-left: 5px;
+    margin-left: 15px;
   }
 
   &:hover {
@@ -90,12 +89,22 @@ export const SideIcon = styled.div`
   width: 20%;
   align-items: center;
   font-weight: 500;
-  padding-top: 10px;
+  justify-self: flex-start;
+  padding-top: 7.5px;
 `;
 
 export const SideText = styled.p`
   font-weight: 500;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
+  text-align: left;
+  margin-left: 20px;
+  width: 80%;
+
+  @media screen {
+    width: auto;
+    margin-left: 10px;
+    
+  }
+  
 `;
