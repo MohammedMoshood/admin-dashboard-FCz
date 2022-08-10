@@ -18,7 +18,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </Icon>
 
           {SideBarData.map((item, index) => {
-            return <MenuItem item={item} key={index} />;
+            return <MenuItem toggle={toggle} item={item} key={index} />;
           })}
         </SideBarWrapper>
       </SidebarContainer>

@@ -10,21 +10,26 @@ import styled from "styled-components"
 
 
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, toggle }) => {
+  
+
   const [subSidebar, setSubSidebar] = useState(false);
 
   const showSubSidebar = () => setSubSidebar(!subSidebar);
   const ArrowStyle = styled.div`
     margin-left: 50px;
     margin-top: 5px;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       margin-left: 10px;
     }
-  `
+    @media screen and (max-width: 1280px) {
+      margin-left: 15px;
+    }
+  `;
   return (
     <>
       <SideBarLink to={item.path} onClick={item.subSidebar && showSubSidebar}>
-        <div style={{display:"flex"}}>
+        <div onClick={toggle && !item.subSidebar} style={{ transition:"400ms" , width: "100%" , height:"100%" ,display:"flex"}}>
           <SideIcon>{item.icon}</SideIcon>
           <SideText>{item.title}</SideText>
         </div>

@@ -11,12 +11,13 @@ const Overview = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
       <HomeWrapper>
+        <Sidebar isOpen={isOpen} toggle={toggle}></Sidebar>
         <Navbar toggle={toggle}></Navbar>
-        <OverViewText  />
+        <OverViewText />
         <StatusSection></StatusSection>
       </HomeWrapper>
     </>
