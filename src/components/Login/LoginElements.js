@@ -57,6 +57,7 @@ export const LoginTextWrap = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  margin-top: 20px;
   @media screen and (max-width: 1280px) {
     width: 500px;
     height: 150px;
