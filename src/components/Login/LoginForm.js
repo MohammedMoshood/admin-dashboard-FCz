@@ -20,6 +20,10 @@ import axios from "../../api/axios";
 const LOGIN_URL = "";
 
 const LoginForm = () => {
+
+
+
+
   const { setAuth } = useAuth()
   const mobileRef = useRef();
   const errRef = useRef();
@@ -27,6 +31,11 @@ const LoginForm = () => {
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+
+
+
+
+
 
   useEffect(() => {
     mobileRef.current.focus();
@@ -66,6 +75,12 @@ const LoginForm = () => {
     }
   };
 
+
+
+
+
+
+
   const navigate = useNavigate();
   return (
     <>
@@ -80,7 +95,7 @@ const LoginForm = () => {
               <LoginP>
                 Please return to the previous screen if you are not an
                 authorized administrator
-                <br /> Otherwise , Input your Details .
+                <br/> Otherwise , Input your Details .
               </LoginP>
             </LoginTextWrap>
             <div className="errdiv">
@@ -118,9 +133,11 @@ const LoginForm = () => {
                   style={{ height: "70px", paddingBottom: "-5px" }}
                   type="password"
                   value={pwd}
+                  autoComplete="off"
                   className="form-control"
                   placeholder="***"
                   id="password"
+                  required
                 />
                 <label
                   htmlFor="password"
