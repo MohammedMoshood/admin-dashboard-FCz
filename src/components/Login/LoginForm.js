@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState, useContext } from "react";
-import AuthContext from "../../context/AuthProvider";
+import React, { useRef, useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import {
   LoginContainer,
   LoginWrap,
@@ -20,7 +20,7 @@ import axios from "../../api/axios";
 const LOGIN_URL = "";
 
 const LoginForm = () => {
-  const { setAuth } = useContext(AuthContext);
+  const { setAuth } = useAuth()
   const mobileRef = useRef();
   const errRef = useRef();
   const [mobileNum, setMobileNum] = useState("");
@@ -61,8 +61,8 @@ const LoginForm = () => {
         setErrMsg("Unauthorized");
       } else {
         setErrMsg("Login Failed");
-      } 
-      errRef.current.focus()
+      }
+      errRef.current.focus();
     }
   };
 
@@ -96,7 +96,7 @@ const LoginForm = () => {
               <MailorMobileInput
                 ref={mobileRef}
                 onChange={(e) => setMobileNum(e.target.value)}
-                style={{ height: "70px", fontSize: "24px",  }}
+                style={{ height: "70px", fontSize: "24px" }}
                 className="form-control"
                 id="mobileNum"
                 type="tel"
@@ -108,12 +108,11 @@ const LoginForm = () => {
               <label
                 htmlFor="mobileNum"
                 style={{ fontSize: 20, color: "grey" }}
-                for="mobileNum"
               >
                 Mobile Number
               </label>
               <br />
-              <div class="form-floating">
+              <div className="form-floating">
                 <PassInput
                   onChange={(e) => setPwd(e.target.value)}
                   style={{ height: "70px", paddingBottom: "-5px" }}
@@ -125,8 +124,7 @@ const LoginForm = () => {
                 />
                 <label
                   htmlFor="password"
-                  style={{ fontSize: 20, color: "grey" , }}
-                  for="password"
+                  style={{ fontSize: 20, color: "grey" }}
                 >
                   Password
                 </label>
